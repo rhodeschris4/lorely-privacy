@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy & Terms — Lorely</title>
+  <title>Privacy Policy &amp; Terms — Lorely</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background: #0E0F17;
-      color: #E4E2DD;
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 16px;
+      background: #F7F5F0;
+      color: #1A1A1A;
+      font-family: 'IBM Plex Serif', Georgia, serif;
+      font-size: 17px;
       line-height: 1.75;
       padding: 60px 24px 80px;
+      -webkit-font-smoothing: antialiased;
     }
 
     .wrap {
@@ -22,52 +26,76 @@
     }
 
     .wordmark {
-      font-family: Arial Narrow, Arial, sans-serif;
-      font-size: 28px;
-      font-weight: 300;
-      letter-spacing: 10px;
-      color: #E4E2DD;
-      margin-bottom: 8px;
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-weight: 700;
+      font-size: 34px;
+      letter-spacing: -0.3px;
+      color: #1A1A1A;
+      margin-bottom: 16px;
     }
 
-    .rule {
-      width: 40px;
-      height: 1px;
-      background: #B8874A;
-      margin-bottom: 40px;
+    /* Masthead underline — thick broadsheet rule */
+    .masthead-rule {
+      height: 2px;
+      background: #1A1A1A;
+      margin-bottom: 48px;
     }
 
     h1 {
-      font-size: 26px;
-      font-weight: normal;
-      color: #E4E2DD;
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      color: #1A1A1A;
       margin-bottom: 8px;
     }
 
     .updated {
-      font-size: 13px;
-      color: #8A8D9C;
-      margin-bottom: 48px;
+      font-family: 'IBM Plex Sans Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: #6B6560;
+      margin-bottom: 40px;
     }
 
     h2 {
-      font-family: Arial, sans-serif;
-      font-size: 11px;
+      font-family: 'IBM Plex Sans Condensed', sans-serif;
+      font-size: 12px;
       font-weight: 600;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: #B8874A;
-      margin-top: 48px;
+      color: #0C1B33;
+      margin-top: 44px;
       margin-bottom: 16px;
     }
 
     p {
-      color: #C8C6C1;
+      color: #1A1A1A;
       margin-bottom: 16px;
     }
 
+    /* Sub-label kicker inside a paragraph (e.g. "Location") */
+    .term {
+      display: inline-block;
+      font-family: 'IBM Plex Sans Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #0C1B33;
+      margin-bottom: 4px;
+    }
+
+    /* Inline third-party service name */
+    .svc {
+      font-family: 'IBM Plex Sans Condensed', sans-serif;
+      font-weight: 600;
+      color: #1A1A1A;
+    }
+
     ul {
-      color: #C8C6C1;
+      color: #1A1A1A;
       padding-left: 20px;
       margin-bottom: 16px;
     }
@@ -77,20 +105,29 @@
     }
 
     a {
-      color: #B8874A;
-      text-decoration: none;
+      color: #0C1B33;
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     a:hover {
-      text-decoration: underline;
+      text-decoration: none;
+    }
+
+    /* Section divider between Privacy and Terms */
+    .section-break {
+      height: 1px;
+      background: #D4CFC4;
+      margin: 80px 0 56px;
     }
 
     .contact {
       margin-top: 64px;
       padding-top: 32px;
-      border-top: 1px solid #252636;
+      border-top: 1px solid #D4CFC4;
+      font-family: 'IBM Plex Sans Condensed', sans-serif;
       font-size: 14px;
-      color: #8A8D9C;
+      color: #6B6560;
     }
   </style>
 </head>
@@ -98,28 +135,28 @@
   <div class="wrap">
 
     <div class="wordmark">LORELY</div>
-    <div class="rule"></div>
+    <div class="masthead-rule"></div>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: February 2026</p>
+    <p class="updated">Last updated: June 2026</p>
 
     <p>Lorely is a mobile app that reveals the hidden history of places near you. This policy explains what information we collect, how we use it, and what we do not do with it. We've kept things simple because our approach to data is simple: collect only what's necessary, store as little as possible, and never sell or share your data.</p>
 
     <h2>Information We Collect</h2>
 
-    <p><strong style="color: #E4E2DD;">Location</strong><br>
+    <p><span class="term">Location</span><br>
     Lorely requires access to your device's GPS location while the app is in use. Your coordinates are used to find historical stories within walking distance of where you are standing. Location is never stored on our servers linked to you — it is rounded to a neighbourhood-level precision (~1km) and used only as an anonymous cache key to serve stories to anyone nearby. We do not track your movements or build a history of places you have visited.</p>
 
-    <p><strong style="color: #E4E2DD;">Story history</strong><br>
+    <p><span class="term">Story history</span><br>
     A list of stories you have opened is stored locally on your device so you can browse your history and see a daily featured story. This data never leaves your device. You can clear it at any time from the Settings menu.</p>
 
-    <p><strong style="color: #E4E2DD;">App usage counters</strong><br>
+    <p><span class="term">App usage counters</span><br>
     A daily story view count is stored locally on your device to manage the free tier limit. It resets automatically at midnight and is never sent to our servers.</p>
 
-    <p><strong style="color: #E4E2DD;">Access codes</strong><br>
+    <p><span class="term">Access codes</span><br>
     If you redeem a promotional access code, that code is stored locally on your device. It is checked against our database only at the time of redemption.</p>
 
-    <p><strong style="color: #E4E2DD;">Bug reports</strong><br>
+    <p><span class="term">Bug reports</span><br>
     If you submit a bug report through the app, the text you write, your app version, and your device platform (iOS or Android) are sent to us by email. No location or personal details are included unless you choose to write them in your report.</p>
 
     <h2>Information We Do Not Collect</h2>
@@ -136,11 +173,11 @@
 
     <p>Lorely uses a small number of third-party services to function. Each operates under its own privacy policy.</p>
 
-    <p><strong style="color: #E4E2DD;">Supabase</strong> — Our backend database stores anonymously cached stories by location. No user accounts or identifiers are stored. <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></p>
+    <p><span class="svc">Supabase</span> — Our backend database stores anonymously cached stories by location. No user accounts or identifiers are stored. <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></p>
 
-    <p><strong style="color: #E4E2DD;">RevenueCat</strong> — If you make an in-app purchase, RevenueCat processes the transaction and manages your entitlement status. They receive standard platform purchase data (device identifiers, purchase receipts) from Apple or Google. <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></p>
+    <p><span class="svc">RevenueCat</span> — If you make an in-app purchase, RevenueCat processes the transaction and manages your entitlement status. They receive standard platform purchase data (device identifiers, purchase receipts) from Apple or Google. <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></p>
 
-    <p><strong style="color: #E4E2DD;">Wikipedia, Wikidata, OpenPlaques, Chronicling America, OpenStreetMap</strong> — Lorely queries these public historical databases using your approximate location to find nearby stories. These are free public services with no user accounts. Your location coordinates are sent as part of the search request.</p>
+    <p><span class="svc">Wikipedia, Wikidata, OpenPlaques, Chronicling America, OpenStreetMap</span> — Lorely queries these public historical databases using your approximate location to find nearby stories. These are free public services with no user accounts. Your location coordinates are sent as part of the search request.</p>
 
     <h2>Data Retention</h2>
 
@@ -156,9 +193,9 @@
 
     <p>If we make significant changes to this policy, we will update the date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
 
-    <div style="margin-top: 80px; padding-top: 8px; border-top: 1px solid #252636;"></div>
+    <div class="section-break"></div>
 
-    <h1 id="terms" style="margin-top: 56px;">Terms of Use</h1>
+    <h1 id="terms">Terms of Use</h1>
     <p class="updated">Last updated: June 2026</p>
 
     <p>These Terms of Use ("Terms") govern your use of the Lorely mobile app ("Lorely", "the app", "we", "us"). By downloading or using Lorely, you agree to these Terms. If you do not agree, please do not use the app.</p>
@@ -167,11 +204,12 @@
 
     <p>Lorely grants you a personal, non-exclusive, non-transferable, revocable license to use the app for your own personal, non-commercial use. You agree not to copy, modify, reverse-engineer, resell, or attempt to extract the source code of the app, and not to use the app for any unlawful purpose.</p>
 
-    <h2>Location-Based Use & Safety</h2>
+    <h2>Location-Based Use &amp; Safety</h2>
 
     <p>Lorely requires access to your device's location to function — stories are shown only for places within walking distance of where you are standing. By using the app you consent to this use of your location, as described in our Privacy Policy above.</p>
 
-    <p><strong style="color: #E4E2DD;">Stay aware of your surroundings.</strong> Lorely is meant to get you outside and exploring on foot. You are responsible for your own safety at all times. Do not use the app while driving, and remain aware of traffic, terrain, private property, and your surroundings while reading. Do not trespass or enter unsafe or restricted areas to reach a story location.</p>
+    <p><span class="term">Stay aware of your surroundings</span><br>
+    Lorely is meant to get you outside and exploring on foot. You are responsible for your own safety at all times. Do not use the app while driving, and remain aware of traffic, terrain, private property, and your surroundings while reading. Do not trespass or enter unsafe or restricted areas to reach a story location.</p>
 
     <h2>Historical Content</h2>
 
@@ -182,15 +220,15 @@
     <p>Lorely is free to use with a limit of 5 story views per day. The Explorer Pass subscription unlocks unlimited story views and is offered as an auto-renewable subscription on the following plans:</p>
 
     <ul>
-      <li><strong style="color: #E4E2DD;">Monthly</strong> — billed each month</li>
-      <li><strong style="color: #E4E2DD;">Annual</strong> — billed once per year</li>
+      <li><span class="svc">Monthly</span> — billed each month</li>
+      <li><span class="svc">Annual</span> — billed once per year</li>
     </ul>
 
     <p>Current prices are shown in the app at the point of purchase and may vary by region. Payment is charged to your Apple ID account upon confirmation of purchase. Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period. Your account is charged for renewal within 24 hours prior to the end of the current period, at the price of the plan you selected.</p>
 
     <p>You can manage or cancel your subscription at any time in your device's account settings (on iOS: Settings → your name → Subscriptions, or the "Manage Subscription" link in the app). Cancelling stops future renewals; the current period remains active until it expires. Refunds are handled by Apple in accordance with the App Store's policies and applicable law.</p>
 
-    <h2>Disclaimer & Limitation of Liability</h2>
+    <h2>Disclaimer &amp; Limitation of Liability</h2>
 
     <p>The app is provided "as is" and "as available" without warranties of any kind, whether express or implied. To the fullest extent permitted by law, we are not liable for any indirect, incidental, or consequential damages, or for any injury, loss, or damage arising from your use of the app or your travel to any location. Your use of the app is at your own risk.</p>
 
@@ -198,8 +236,9 @@
 
     <p>We may update these Terms from time to time. If we make significant changes, we will update the date above. Continued use of the app after changes constitutes acceptance of the updated Terms.</p>
 
-    <!-- TODO: set governing-law jurisdiction below to your state/country before public launch. -->
-    <p>These Terms are governed by the laws of the United States and the state in which the developer resides, without regard to conflict-of-law principles.</p>
+    <h2>Governing Law</h2>
+
+    <p>These Terms are governed by the laws of the Commonwealth of Virginia, United States, without regard to conflict-of-law principles.</p>
 
     <div class="contact">
       <p>Questions about this policy or these terms? Use the bug report form inside the app — tap the settings icon on the map screen.</p>
